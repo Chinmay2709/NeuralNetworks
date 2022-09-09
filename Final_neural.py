@@ -1,3 +1,10 @@
+#Discription:
+#    This is my progress until today on Neural Networks, still a lot to learn.
+#Author:
+#    Chinmay Mishra
+#Date:
+#    9/9/2022
+
 from numpy import *
 import tensorflow as ts
 
@@ -107,8 +114,3 @@ print(f"""
         
         NEURAL-RUN: {Neural_run} Times
         """)
-
-# if Output[0] > 0.5 and Output[1] > 0.5:
-#     print("Go UP!")
-# if Output[0] < 0.5 and Output[1] < 0.5:
-#     print("Go DOWN!")

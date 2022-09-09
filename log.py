@@ -1,6 +1,5 @@
 import numpy as np
 
-
 class NeuralNetwork:
         def __init__(self):
                 self.weights=np.random.randn(4,4)
