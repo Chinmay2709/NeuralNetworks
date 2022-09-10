@@ -6,9 +6,6 @@
 #    9/9/2022
 
 from numpy import *
-import tensorflow as ts
-
-print(ts.__version__)
 
 
 hidden_size=4
@@ -110,7 +107,7 @@ print(f"""
 
 
         Final Error: {NN.error}
-        Final Output:{round(Output[0])} {round(Output[1])}
+        Final Output:{Output[0]} {Output[1]}
         
         NEURAL-RUN: {Neural_run} Times
         """)
