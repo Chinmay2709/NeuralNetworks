@@ -38,3 +38,4 @@ class Iris_Neural_Network():
 
 #Initializing the variables X (Input) and Target (Output): 
 
+
