@@ -30,9 +30,9 @@ class Iris_Neural_Network():
         pass
     def Delta(self):
         pass
-    def BackPropogation():
+    def BackPropogation(self):
         pass
-    def Learning():
+    def Learning(self):
         pass
 
 
