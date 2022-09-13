@@ -1,3 +1,15 @@
+#Discription:
+#    This is my little gaming environment I made for my Neural Network to play and learn a ball game,
+#    where it has to figure out a way to collect the cirlcle that pops on the map at a random position.
+#    I think it's little broken now.
+#    Refer Log.py for the Neural Code.
+#Author:
+#    Chinmay Mishra
+#Date:
+#    Some time unknown: I started recording my coding progress late.
+
+
+
 import random
 import numpy as np
 import sys
