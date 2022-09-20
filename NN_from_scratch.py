@@ -19,15 +19,39 @@ print(data['target_names'])
 
 class Iris_Neural_Network():
     def __init__(self):
-        pass
-    def Forward(self,X):
-        pass
-    def ActivationRelu(self):
-        pass
-    def ActivationRivRelu_2(self):
-        pass
-    def Loss_and_error(self):
-        pass
+        
+        #Actual Target:
+        self.Target = data['target']
+
+
+        #Defining Hidden Layers:
+        self.hiddenLayer = 16
+        self.hiddenLayer_2 = 2
+        self.Erroe = 0
+
+        #Defining Weights:
+        self.weights_0_1 = array(4,self.hiddenLayer)
+        self.weights_1_2 = array(self.hiddenLayer,self.hiddenLayer_2)
+        self.weights_2_3 = array(self.hiddenLayer_2,1)
+
+    def Forward(self,Layer_0):
+
+        #Forward Pass:
+        self.layer_1 = self.ActivationRelu(dot(Layer_0,self.weights_0_1))
+        self.layer_2 = dot(self.Layer_1,self.weights_1_2)
+        self.Layer_Output = dot(self.layer_2,self.weights_2_3)
+
+        #Passing Values to Loss Function:
+        self.Loss_and_error(self.Layer_Output,self.Target)
+
+    def ActivationRelu(self, a):
+        return (a > 0) * a
+    def ActivationRivRelu_2(self, a):
+        return (a > 0)
+    def Loss_and_error(self, Layer_Output,Target):
+        
+        #Calculating Loss and Error
+        self.Error += (Layer_Output, Target) ** 2
     def Delta(self):
         pass
     def BackPropogation(self):
