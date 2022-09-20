@@ -27,7 +27,7 @@ class Iris_Neural_Network():
         #Defining Hidden Layers:
         self.hiddenLayer = 16
         self.hiddenLayer_2 = 2
-        self.Erroe = 0
+        self.Error = 0
 
         #Defining Weights:
         self.weights_0_1 = array(4,self.hiddenLayer)
