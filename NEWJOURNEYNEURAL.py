@@ -1,3 +1,10 @@
+#Discription:
+#    Another attempt to make a neural network. It is an incomplete neural network.
+#Author:
+#    Chinmay Mishra
+#Date:
+#    Some time unknown: I started recording my coding progress late.
+
 from bokeh.plotting import *
 import numpy as np   
 goal=[10,2,3]

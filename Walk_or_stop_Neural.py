@@ -1,3 +1,10 @@
+#Discription:
+#    Another attempt to make a neural network.
+#Author:
+#    Chinmay Mishra
+#Date:
+#    Some time unknown: I started recording my coding progress late.
+
 import numpy as np
 from bokeh.plotting import *
 import math

@@ -1,3 +1,10 @@
+#Discription:
+#    Log.py the Neural Code for file third_neural.
+#Author:
+#    Chinmay Mishra
+#Date:
+#    Some time unknown: I started recording my coding progress late.
+
 import numpy as np
 
 class NeuralNetwork:
