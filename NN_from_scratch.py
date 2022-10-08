@@ -6,14 +6,16 @@
 #    9/10/2022
 from numpy import *
 from sklearn.datasets import load_iris
-
 data = load_iris()
 
-print('Detailed Data listing:')
-print(data['data'].shape)
-print(data['target'].shape)
-print(data['target_names'])
+print(f"""
+    Detailed Data listing:
 
+    Input Layer Shape:  {data['data'].shape},
+    Shape Target:       {data['target'].shape},
+    Target Names:       {data['target_names']}
+
+""")
 
 #Defining Neural Network Class:
 
@@ -38,7 +40,7 @@ class Iris_Neural_Network():
 
         #Forward Pass:
         self.layer_1 = self.ActivationRelu(dot(Layer_0,self.weights_0_1))
-        self.layer_2 = dot(self.Layer_1,self.weights_1_2)
+        self.layer_2 = self.ActivationRelu(dot(self.Layer_1,self.weights_1_2))
         self.Layer_Output = dot(self.layer_2,self.weights_2_3)
 
         #Passing Values to Loss Function:
@@ -48,10 +50,13 @@ class Iris_Neural_Network():
         return (a > 0) * a
     def ActivationRivRelu_2(self, a):
         return (a > 0)
+    def ActivationSoftMax(self, s):
+        return (exp(s)/sum(exp(s)))
     def Loss_and_error(self, Layer_Output,Target):
         
         #Calculating Loss and Error
-        self.Error += (Layer_Output, Target) ** 2
+        self.Error += (Layer_Output - Target) ** 2
+
     def Delta(self):
         pass
     def BackPropogation(self):
