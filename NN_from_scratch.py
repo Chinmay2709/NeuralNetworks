@@ -4,10 +4,13 @@
 #    Chinmay Mishra
 #Date:
 #    9/10/2022
+from csv import *
+from fileinput import filename
 from numpy import *
 from sklearn.datasets import load_iris
 data = load_iris()
 
+#Detailed overview of data actually required for neural netowrks learning process.
 print(f"""
     Detailed Data listing:
 
@@ -16,6 +19,15 @@ print(f"""
     Target Names:       {data['target_names']}
 
 """)
+
+#Writing the data to a CSV file for our understanding.
+
+filename = 'IRIS_DATA.csv'
+
+with open(filename,'w') as IRIS_DATA:
+    writing_iris = writer(IRIS_DATA)
+    writing_iris.writerows(data['data'])
+    
 
 #Defining Neural Network Class:
 
